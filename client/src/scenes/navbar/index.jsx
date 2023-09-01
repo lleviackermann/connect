@@ -40,6 +40,8 @@ const Navbar = () => {
   const alt = theme.palette.background.alt;
 
   const fullName = `${user.firstName} ${user.lastName}`;
+  // const fullName = "Suprit kumar";
+  // console.log("Hello");
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -56,7 +58,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Connect
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween

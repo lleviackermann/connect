@@ -6,7 +6,7 @@ export const getUser = async (req, res) => {
         const { id } = req.params;
         const user = await User.findById(id);
         res.status(200).json(user);
-    } catch(err) {
+    } catch(error) {
         res.status(500).json({ error: error.message });
     }
 };
@@ -26,7 +26,7 @@ export const getUserFriends = async (req, res) => {
         )
 
         res.status(200).json(formattedFriends);
-    } catch(err) {
+    } catch(error) {
         res.status(404).json({ error: error.message });
     }
 };
@@ -57,7 +57,7 @@ export const addRemoveFriend = async (req, res) => {
         );
 
         res.status(200).json(formattedFriends)
-    } catch(err) {
+    } catch(error) {
         res.status(404).json({ error: error.message });
     }
 };
